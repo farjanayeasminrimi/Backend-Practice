@@ -5,6 +5,10 @@ const server = http.createServer((req, res) => {
     res.writeHead(200, { "content-type": "text/plain" });
     res.end("Hello from server in homepage");
   }
+  if (req.url === "/about-us") {
+    res.writeHead(200, { "content-type": "text/plain" });
+    res.end("Hi there from about page");
+  }
 });
 
 server.listen(5000, () => {
